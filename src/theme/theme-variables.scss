@@ -1,0 +1,88 @@
+/*
+ * Application global variables.
+ */
+
+// Set Font Awesome font path
+$fa-font-path: "~@fortawesome/fontawesome-free-webfonts/webfonts";
+
+
+// ---------------------------------------------------------------------------
+// Bootstrap variables
+//
+// Override Bootstrap variables here to suite your theme.
+// Copy variables you want to customize from node_modules/bootstrap/scss/_variables.scss
+
+//
+// Color system
+//
+
+$text-color: #232323;
+$nav-color: #333333;
+
+$white:  #fff;
+$gray:  gray;
+$gray-100: #F9F9F9;
+$gray-200: #F3F3F3;
+$gray-300: #E3E3E3;
+$gray-400: #B0B0B0;
+$gray-500: #37424A;
+$black:  #000;
+
+$blue:    #003B5C;
+$red:     #D52B1E;
+$light-blue:  #77C5D5;
+$light-green:  #92ACA0;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+$theme-colors: (
+  primary: $red,
+  secondary: $blue,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-500
+);
+
+//font family
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url('/assets/fonts/HelveticaNeue-45-Light.otf') format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url('/assets/fonts/HelveticaNeue-46-Light-Italic.otf') format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url('/assets/fonts/HelveticaNeue-65-Medium.otf') format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url('/assets/fonts/HelveticaNeue-75-Bold.otf') format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+$font-family: "HelveticaNeue";
+$font-size-default: 12px;
+
+// Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used
+// in components.
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/mixins";

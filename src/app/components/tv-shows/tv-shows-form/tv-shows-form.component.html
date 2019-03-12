@@ -1,0 +1,43 @@
+<div *ngIf="tvShow" class="row mt-20">
+    <div class="offset-md-2 col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Update show - {{tvShow.name}}</h5>
+                <form (ngSubmit)="updateTvShow()">
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Name</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" [(ngModel)]="tvShow.name" name="name"
+                                #name="ngModel">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Rating</label>
+                        <div class="col-md-6">
+                            <input ratingRange type="number" class="form-control" [(ngModel)]="tvShow.rating.average" name="rating"
+                                #rating="ngModel">
+                                <validation [fieldName]="rating"></validation>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Summary</label>
+                        <div class="col-md-6">
+                            <textarea rows="10" class="form-control" [(ngModel)]="tvShow.summary" name="summary"
+                                #summary="ngModel"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-md-3 col-md-6">
+                            <button type="submit" class="btn btn-primary">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
